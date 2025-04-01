@@ -15,7 +15,6 @@ public class MovPersonaje : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("Hola Mundo");
         rb = GetComponent<Rigidbody2D>();
 
         transform.position = new Vector3(-14.6f, 2.36f, 0);
