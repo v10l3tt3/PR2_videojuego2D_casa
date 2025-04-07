@@ -12,10 +12,14 @@ public class MovPersonaje : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private Animator animatorController;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        animatorController = this.GetComponent<Animator>();
 
         transform.position = new Vector3(-14.6f, 2.36f, 0);
 
@@ -65,6 +69,13 @@ public class MovPersonaje : MonoBehaviour
         }else if(movTeclas > 0){
             this.GetComponent<SpriteRenderer>().flipX = false;
         }
+        //Animacion Walking
+        if(movTeclas != 0){
+            animatorController.SetBool ("activaCamina",true);
+        }else{
+            animatorController.SetBool ("activaCamina",false);
+        }
+animatorController.SetBool ("activaCamina",true);
 
 
         //salto
