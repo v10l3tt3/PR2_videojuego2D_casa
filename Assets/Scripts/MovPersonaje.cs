@@ -14,7 +14,7 @@ public class MovPersonaje : MonoBehaviour
 
     private Animator animatorController;
 
-    GameObject Respawn;
+    private GameObject respawn;
 
     
     void Start()
@@ -23,9 +23,11 @@ public class MovPersonaje : MonoBehaviour
         
         animatorController = this.GetComponent<Animator>();
 
-        Respawn = GameObject.Find("Respawn");
+        respawn = GameObject.Find("Respawn");
+        //respawn = this.GetComponent<GameObject>("Respawn");
       
-        transform.position = new Vector3(-14.6f, 2.36f, 0);
+       // transform.position = new Vector3(-14.6f, 2.36f, 0);
+        Respawnear();
 
     }
 
@@ -101,12 +103,27 @@ public class MovPersonaje : MonoBehaviour
             puedoSaltar =false;
         }
         }
+
+        //Comprobar salida de línea horizontal baja (fuera de mapa)
+        if(transform.position.y <= -3){
+            Respawnear();
+        }
+
+
     }
 
+
     /*aproximacion deteccion de suelo para poder volver a saltar
-        void OnCollisionEnter2D(){
+    void OnCollisionEnter2D(){
             puedoSaltar = true;
-        }*/
+    }*/
+
+    public void Respawnear(){
+        transform.position = respawn.transform.position;
+    }
+    
+
+
 
 
 
