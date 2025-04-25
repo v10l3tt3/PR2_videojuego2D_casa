@@ -5,14 +5,24 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static int vidas = 3;
+
+    public bool estoyMuerto = false;
+
+    public static GameManager Instance { get; private set; }
     
-    // Start is called before the first frame update
+    void Awake(){
+       if(Instance == null ){
+            Instance = this;
+       }
+        
+    }
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         

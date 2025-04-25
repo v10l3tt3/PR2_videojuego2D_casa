@@ -16,6 +16,8 @@ public class MovPersonaje : MonoBehaviour
 
     private GameObject respawn;
 
+    //private bool estoyMuerto = false;
+
     
     void Start()
     {
@@ -27,13 +29,16 @@ public class MovPersonaje : MonoBehaviour
         //respawn = this.GetComponent<GameObject>("Respawn");
       
        // transform.position = new Vector3(-14.6f, 2.36f, 0);
-        Respawnear();
+        transform.position = respawn.transform.position;
+        
 
     }
 
 
     void Update()
     {
+        //if(GameManager.estoyMuerto) return;
+
         float movTeclas = Input.GetAxis("Horizontal"); //(a -1f - d 1f)
         //float MovTeclasY = Input.GetAxis("Vertical"); //(w -1f - s 1f)  por si tiene vuelo
         
@@ -109,7 +114,10 @@ public class MovPersonaje : MonoBehaviour
             Respawnear();
         }
 
-
+        //0 vidas
+        if(GameManager.vidas <= 0){
+            //GameManager.estoyMuerto = true;
+        }
     }
 
 
@@ -119,7 +127,12 @@ public class MovPersonaje : MonoBehaviour
     }*/
 
     public void Respawnear(){
+        
+       // Debug.Log("vidas: "+GameManager.vidas);
+        //GameManager.vidas = GameManager.vidas - 1;
+        //Debug.Log("vidas: "+GameManager.vidas);
         transform.position = respawn.transform.position;
+
     }
     
 
