@@ -14,18 +14,22 @@ public class MovPersonaje : MonoBehaviour
 
     private Animator animatorController;
 
-    // Start is called before the first frame update
+    GameObject Respawn;
+
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        
         animatorController = this.GetComponent<Animator>();
 
+        Respawn = GameObject.Find("Respawn");
+      
         transform.position = new Vector3(-14.6f, 2.36f, 0);
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         float movTeclas = Input.GetAxis("Horizontal"); //(a -1f - d 1f)
@@ -75,13 +79,13 @@ public class MovPersonaje : MonoBehaviour
         }else{
             animatorController.SetBool ("activaCamina",false);
         }
-animatorController.SetBool ("activaCamina",true);
+            animatorController.SetBool ("activaCamina",true);
 
 
         //salto
         if (Input.GetKeyDown(KeyCode.Space) && puedoSaltar){
             rb.AddForce(
-                new Vector2 (0, multiplicadorSalto),
+                new Vector2 (0,multiplicadorSalto),
                 ForceMode2D.Impulse
                 );
             //puedoSaltar = false;

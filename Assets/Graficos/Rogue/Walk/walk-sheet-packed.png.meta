@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 52
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,10 +100,10 @@ TextureImporter:
       name: walk-sheet-packed_0
       rect:
         serializedVersion: 2
-        x: 24
+        x: 22
         y: 148
-        width: 64
-        height: 64
+        width: 52
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,10 +121,10 @@ TextureImporter:
       name: walk-sheet-packed_2
       rect:
         serializedVersion: 2
-        x: 152
+        x: 151
         y: 148
-        width: 64
-        height: 64
+        width: 52
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,10 +142,10 @@ TextureImporter:
       name: walk-sheet-packed_3
       rect:
         serializedVersion: 2
-        x: 280
+        x: 281
         y: 148
-        width: 64
-        height: 64
+        width: 52
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: walk-sheet-packed_5
       rect:
         serializedVersion: 2
-        x: 24
-        y: 20
-        width: 64
-        height: 64
+        x: 22
+        y: 18
+        width: 52
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,9 +185,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 152
-        y: 20
-        width: 64
-        height: 64
+        y: 18
+        width: 52
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: walk-sheet-packed_7
       rect:
         serializedVersion: 2
-        x: 280
-        y: 20
-        width: 64
-        height: 64
+        x: 281
+        y: 19
+        width: 52
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

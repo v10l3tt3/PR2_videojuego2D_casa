@@ -6,47 +6,27 @@ using UnityEngine;
 public class Salto : MonoBehaviour
 {
 
-    public int miEdad = 23;
-
-    public float miAltura = 5.0f;
-
-    public string miNombre = "Violette";
-
-    public bool tengoMelena = true; 
-
-    public GameObject miCubo; 
-
-    public int numero1 = 10;
-    public int numero2 = 80;
+   
 
     public Vector3 posInicial; 
-    public Color miColor;
+    //public Color miColor;
 
     public float velocidad = 0.01f; 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-       // Debug.Log("Hola. Mi nombre es "+miNombre+". Y tengo "+miEdad+" años.");
+    void Start(){
+      this.GetComponent<Transform>().position = posInicial;
 
-       this.GetComponent<Transform>().position = posInicial;
+      this.GetComponent<SpriteRenderer>().flipX = true;
+      }
 
-       this.GetComponent<SpriteRenderer>().flipX = true;
-       
-       
-    }
-
-    void Awake()
-    {
+    void Awake(){
        // Debug.Log("Soy Awake, soy preferente ante void Start")
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       // Debug.Log("Hola. Mi nombre es "+miNombre+". Y tengo "+miEdad+" años.");  
 
+    void Update(){
+       
        // float positionActual = this.GetComponent<Transform>().position.x;
        // transform.position = new Vector3(positionActual-0.001f,0,0); 
 
@@ -57,19 +37,15 @@ public class Salto : MonoBehaviour
        // transform.localScale = new Vector3(velocidad,0,0);
 
          // para ir a la izquierda con la A
-         if(Input.GetKey(KeyCode.A)){
+         /*if(Input.GetKey(KeyCode.A)){
             transform.Translate(velocidad*-1, 0, 0);
          }
 
          // para ir a la derecha con la D
          if(Input.GetKey(KeyCode.D)){
             transform.Translate(velocidad, 0, 0);
-         }
+         }*/
     }
 
-   // void OnGUI(){
-     // if(Event.current.isMouse == true){
-       //  Debug.Log(Event.current.type.ToString());
-     // }
-   // }
+
 }
