@@ -16,7 +16,7 @@ public class MovPersonaje : MonoBehaviour
 
     private GameObject respawn;
 
-    //private bool estoyMuerto = false;
+    private bool estoyMuerto = false;
 
     
     void Start()
@@ -128,9 +128,9 @@ public class MovPersonaje : MonoBehaviour
 
     public void Respawnear(){
         
-       // Debug.Log("vidas: "+GameManager.vidas);
-        //GameManager.vidas = GameManager.vidas - 1;
-        //Debug.Log("vidas: "+GameManager.vidas);
+        Debug.Log("vidas: "+GameManager.vidas);
+        GameManager.vidas = GameManager.vidas - 1;
+        Debug.Log("vidas: "+GameManager.vidas);
         transform.position = respawn.transform.position;
 
     }
